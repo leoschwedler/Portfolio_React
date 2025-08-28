@@ -85,10 +85,27 @@ Clone o repositório e faça push das mudanças. Mudanças enviadas também ser�
 
 ## Como Fazer Deploy
 
+### Opção 1: cPanel (Recomendado)
+
+1. Execute `npm run build` para gerar os arquivos de produção
+2. Faça upload dos arquivos da pasta `dist` para o diretório público do cPanel
+3. Faça upload do arquivo `.htaccess` para a raiz do diretório público
+4. Configure o domínio `schwedlermobile.com.br` no cPanel
+
+### Opção 2: Lovable
+
 Simplesmente abra o [Lovable](https://lovable.dev/projects/0633d6e3-7be1-49bb-a995-f0633ad7e868) e clique em Share -> Publish.
 
 ## Domínio Personalizado
 
-Para conectar um domínio personalizado, navegue até Project > Settings > Domains e clique em Connect Domain.
+**Domínio Atual:** `schwedlermobile.com.br`
 
+Para conectar um domínio personalizado no cPanel:
+
+1. Acesse o cPanel da sua hospedagem
+2. Vá em "Domains" ou "Domains Manager"
+3. Adicione o domínio `schwedlermobile.com.br`
+4. Aponte para o diretório público correto
+
+Para Lovable, navegue até Project > Settings > Domains e clique em Connect Domain.
 Leia mais aqui: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

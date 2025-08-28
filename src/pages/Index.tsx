@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { BottomNav } from "@/components/navigation/BottomNav";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -19,7 +20,7 @@ const Index = () => {
         if (element) {
           const offsetTop = element.offsetTop;
           const offsetBottom = offsetTop + element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
             setActiveSection(section);
             break;
@@ -34,23 +35,82 @@ const Index = () => {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
     setActiveSection(sectionId);
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ContactSection />
-      
-      <BottomNav 
-        activeSection={activeSection} 
-        onSectionChange={scrollToSection} 
-      />
-    </div>
+    <>
+      <Helmet>
+        <title>
+          Leonardo Schwedler - Desenvolvedor Mobile Android & Flutter
+        </title>
+        <meta
+          name="description"
+          content="Portfolio de Leonardo Schwedler, desenvolvedor mobile especializado em Android nativo, Flutter e Java Spring Boot. Experiência em Clean Architecture, MVVM, MVI e desenvolvimento de aplicações escaláveis."
+        />
+        <meta
+          name="keywords"
+          content="desenvolvedor mobile, Android nativo, Flutter, Kotlin, Java, Spring Boot, Clean Architecture, MVVM, MVI, desenvolvimento mobile, portfolio"
+        />
+        <meta name="author" content="Leonardo Schwedler" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://schwedlermobile.com.br/" />
+        <meta
+          property="og:title"
+          content="Leonardo Schwedler - Desenvolvedor Mobile"
+        />
+        <meta
+          property="og:description"
+          content="Portfolio de Leonardo Schwedler, desenvolvedor mobile especializado em Android nativo, Flutter e Java Spring Boot."
+        />
+        <meta
+          property="og:image"
+          content="https://schwedlermobile.com.br/leonardo-profile.jpg"
+        />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://schwedlermobile.com.br/"
+        />
+        <meta
+          property="twitter:title"
+          content="Leonardo Schwedler - Desenvolvedor Mobile"
+        />
+        <meta
+          property="twitter:description"
+          content="Portfolio de Leonardo Schwedler, desenvolvedor mobile especializado em Android nativo, Flutter e Java Spring Boot."
+        />
+        <meta
+          property="twitter:image"
+          content="https://schwedlermobile.com.br/leonardo-profile.jpg"
+        />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://schwedlermobile.com.br/" />
+
+        {/* Favicon */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ContactSection />
+
+        <BottomNav
+          activeSection={activeSection}
+          onSectionChange={scrollToSection}
+        />
+      </div>
+    </>
   );
 };
 

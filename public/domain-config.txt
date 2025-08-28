@@ -1,0 +1,38 @@
+# Configuração do Domínio - Portfolio Leonardo Schwedler
+# =====================================================
+
+DOMÍNIO PRINCIPAL: schwedlermobile.com.br
+SERVIÇO: Portfolio profissional de desenvolvedor mobile
+
+## Configurações para cPanel:
+1. Domínio: schwedlermobile.com.br
+2. Diretório público: public_html/ (ou o diretório configurado)
+3. SSL: Habilitar certificado SSL gratuito (Let's Encrypt)
+4. Redirecionamento: www.schwedlermobile.com.br -> schwedlermobile.com.br
+
+## Arquivos essenciais para upload:
+- index.html (página principal)
+- .htaccess (configurações do Apache)
+- sitemap.xml (mapa do site para SEO)
+- robots.txt (orientações para crawlers)
+- pasta assets/ (imagens e recursos)
+- pasta css/ (estilos)
+- pasta js/ (scripts)
+
+## Configurações DNS recomendadas:
+- A Record: @ -> IP do servidor
+- CNAME: www -> schwedlermobile.com.br
+- MX: configurado para email (se aplicável)
+
+## Verificações pós-deploy:
+1. Site acessível via https://schwedlermobile.com.br
+2. Redirecionamento 404 funcionando
+3. Navegação entre seções funcionando
+4. Imagens carregando corretamente
+5. Meta tags SEO funcionando
+
+## Contato para suporte:
+- Email: leonardoschwedler@gmail.com
+- WhatsApp: +55 (41) 98804-9030
+
+Última atualização: 19/12/2024
