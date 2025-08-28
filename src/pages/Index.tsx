@@ -66,7 +66,7 @@ const Index = () => {
         </title>
         <meta
           name="description"
-          content="Portfolio de Leonardo Schwedler, desenvolvedor mobile especializado em Android nativo, Flutter e Java Spring Boot. Experiência em Clean Architecture, MVVM, MVI e desenvolvimento de aplicações escaláveis."
+          content="Portfolio de Leonardo Schwedler, desenvolvedor mobile Android nativo, Flutter e Java Spring Boot. Clean Architecture, MVVM, MVI."
         />
         <meta
           name="keywords"
@@ -109,9 +109,6 @@ const Index = () => {
           property="twitter:image"
           content="https://schwedlermobile.com.br/leonardo-profile.jpg"
         />
-
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://schwedlermobile.com.br/" />
 
         {/* Favicon */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />

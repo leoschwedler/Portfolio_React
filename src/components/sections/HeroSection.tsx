@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Github, Linkedin, Mail, Instagram } from "lucide-react";
+import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import profileImage from "@/assets/leonardo-profile.jpeg";
 
@@ -35,12 +35,6 @@ export const HeroSection = () => {
       href: "https://www.linkedin.com/in/leonardo-schwuedller/",
       label: "LinkedIn",
       color: "hover:bg-blue-600/20 hover:text-blue-400",
-    },
-    {
-      icon: Instagram,
-      href: "https://instagram.com/leonardo.dev",
-      label: "Instagram",
-      color: "hover:bg-pink-600/20 hover:text-pink-400",
     },
   ];
 
@@ -177,10 +171,35 @@ export const HeroSection = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Olá! Sou Leo, desenvolvedor apaixonado por solucionar problemas
             através da tecnologia. Atualmente, foco no desenvolvimento mobile
-            com <span className="text-primary font-medium">Android nativo</span>{" "}
-            e <span className="text-primary font-medium">Flutter</span>, mas
-            também mantenho estudos em backend com{" "}
-            <span className="text-primary font-medium">Java Spring Boot</span>.
+            com{" "}
+            <button
+              onClick={() => scrollToSection("skills")}
+              className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+            >
+              Android nativo
+            </button>{" "}
+            e{" "}
+            <button
+              onClick={() => scrollToSection("skills")}
+              className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+            >
+              Flutter
+            </button>
+            , mas também mantenho estudos em backend com{" "}
+            <button
+              onClick={() => scrollToSection("projects")}
+              className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+            >
+              Java Spring Boot
+            </button>
+            . Conheça mais{" "}
+            <button
+              onClick={() => scrollToSection("about")}
+              className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+            >
+              sobre minha jornada
+            </button>
+            .
           </p>
         </motion.div>
 

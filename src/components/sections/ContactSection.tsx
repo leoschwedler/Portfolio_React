@@ -109,8 +109,27 @@ Podemos conversar?`;
             Contato
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Vamos trabalhar juntos? Entre em contato para projetos mobile com
-            Android nativo, Flutter ou Java Spring Boot!
+            Vamos trabalhar juntos? Entre em contato para projetos mobile com{" "}
+            <button
+              onClick={() => {
+                const element = document.getElementById("skills");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+            >
+              minhas tecnologias
+            </button>
+            : Android nativo, Flutter ou Java Spring Boot! Veja{" "}
+            <button
+              onClick={() => {
+                const element = document.getElementById("projects");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+            >
+              meus projetos
+            </button>{" "}
+            antes de entrar em contato.
           </p>
         </motion.div>
 

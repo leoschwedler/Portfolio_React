@@ -144,8 +144,27 @@ export const SkillsSection = () => {
             Habilidades
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tecnologias e ferramentas que domino para criar aplicações mobile
-            escaláveis e backends robustos
+            Tecnologias e ferramentas que domino para criar{" "}
+            <button
+              onClick={() => {
+                const element = document.getElementById("projects");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+            >
+              aplicações mobile escaláveis
+            </button>{" "}
+            e backends robustos. Saiba mais{" "}
+            <button
+              onClick={() => {
+                const element = document.getElementById("about");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+            >
+              sobre minha experiência
+            </button>
+            .
           </p>
         </motion.div>
 

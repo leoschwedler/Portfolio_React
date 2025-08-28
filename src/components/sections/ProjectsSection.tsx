@@ -183,8 +183,27 @@ export const ProjectsSection = () => {
             Projetos
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Projetos mobile que desenvolvi utilizando Android nativo, Flutter e
-            Java Spring Boot
+            Projetos mobile que desenvolvi utilizando{" "}
+            <button
+              onClick={() => {
+                const element = document.getElementById("skills");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+            >
+              minhas principais tecnologias
+            </button>
+            : Android nativo, Flutter e Java Spring Boot.{" "}
+            <button
+              onClick={() => {
+                const element = document.getElementById("contact");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+            >
+              Entre em contato
+            </button>{" "}
+            para discutir seu projeto.
           </p>
         </motion.div>
 

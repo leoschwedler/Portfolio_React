@@ -146,8 +146,37 @@ export const AboutSection = () => {
                 variants={itemVariants}
               >
                 Hoje, foco em Android nativo e Flutter, aplicando boas práticas,
-                performance e arquitetura sólida em todos os projetos que
-                participo.
+                performance e arquitetura sólida em todos os{" "}
+                <button
+                  onClick={() => {
+                    const element = document.getElementById("projects");
+                    element?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+                >
+                  projetos que participo
+                </button>
+                . Explore minhas{" "}
+                <button
+                  onClick={() => {
+                    const element = document.getElementById("skills");
+                    element?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+                >
+                  habilidades técnicas
+                </button>{" "}
+                ou{" "}
+                <button
+                  onClick={() => {
+                    const element = document.getElementById("contact");
+                    element?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="text-primary font-medium hover:text-primary/80 transition-colors underline decoration-primary/30 hover:decoration-primary/60"
+                >
+                  entre em contato
+                </button>
+                .
               </motion.p>
             </div>
 
