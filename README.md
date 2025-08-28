@@ -1,111 +1,160 @@
-# Portfolio - Leonardo Schwedler
+# 🚀 Leonardo Schwedler - Portfólio
 
-## Sobre o Projeto
 
-Portfolio pessoal de Leonardo Schwedler, desenvolvedor mobile apaixonado por solucionar problemas através da tecnologia.
+[![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue.svg)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.19-purple.svg)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.17-38B2AC.svg)](https://tailwindcss.com/)
 
-**Foco**: Desenvolvimento mobile com Android nativo e Flutter, além de estudos em backend com Java Spring Boot.
+> 🌐 **[Visite o site ao vivo](https://schwedlermobile.com.br)**
 
-## Tecnologias Utilizadas
+Portfólio pessoal moderno e responsivo desenvolvido com **React**, **TypeScript** e **Tailwind CSS**, apresentando minha trajetória como desenvolvedor mobile especializado em **Android nativo** e **Flutter**.
 
-Este projeto foi construído com:
+---
 
-- **Frontend**: React, TypeScript, Vite
-- **UI Components**: shadcn-ui
-- **Styling**: Tailwind CSS
-- **Mobile Stack**: Android Nativo, Flutter, Java Spring Boot
+## 📋 Sumário
 
-## Como Executar Localmente
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Características](#-características)
+- [Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [Seções do Portfólio](#-seções-do-portfólio)
+- [Como Executar](#-como-executar)
+- [Build e Deploy](#-build-e-deploy)
 
-### Pré-requisitos
+---
 
-- Node.js & npm instalados - [instalar com nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🎯 Sobre o Projeto
 
-### Passos para Execução
+Este portfólio apresenta minha experiência como desenvolvedor mobile, destacando projetos em **Android nativo (Java/Kotlin)**, **Flutter**, e **Java Spring Boot**. Ele reflete minha paixão por criar aplicações móveis escaláveis e backends robustos.
 
-```sh
-# Passo 1: Clone o repositório
-git clone <YOUR_GIT_URL>
+### 🎨 Características Visuais
 
-# Passo 2: Navegue para o diretório do projeto
+- **Design Moderno**: Interface clean com gradientes e animações suaves
+- **Tema Dark**: Experiência visual otimizada para desenvolvedores
+- **Animações Fluidas**: Powered by Framer Motion
+- **Tipografia**: Gradientes no texto para destaque visual
+- **Responsividade**: Adaptado para todos os dispositivos
+
+---
+
+## ✨ Características
+
+### 🌟 Funcionalidades Principais
+
+- SPA com React Router
+- Animações avançadas com Framer Motion
+- Design System completo com Radix UI + Tailwind CSS
+- PWA com Service Worker
+- SEO otimizado com React Helmet Async
+- Navegação suave entre seções
+- Formulário de contato funcional
+- Compressão Gzip/Brotli
+- Lazy Loading de imagens
+- TypeScript para type safety
+
+### 🔒 Segurança e Performance
+
+- Content Security Policy (CSP)
+- Headers de segurança configurados
+- Cache strategy otimizada
+- Bundle Splitting automático
+- Tree Shaking para redução de bundle
+- Preload de recursos críticos
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### 🎯 Core Technologies
+
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| React      | 18.3.1 | Biblioteca principal para UI |
+| TypeScript | 5.8.3  | Superset do JavaScript com tipagem |
+| Vite       | 5.4.19 | Build tool e dev server |
+| Tailwind CSS | 3.4.17 | Framework CSS utility-first |
+
+### 🎨 UI e Animações
+
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| Framer Motion | 12.23.12 | Biblioteca de animações |
+| Radix UI     | Várias | Componentes acessíveis |
+| Lucide React | 0.462.0 | Ícones SVG |
+| Class Variance Authority | 0.7.1 | Gerenciamento de variantes CSS |
+
+### 🔧 Ferramentas e Utilidades
+
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| React Router DOM | 6.30.1 | Roteamento SPA |
+| React Helmet Async | 2.0.5 | Gerenciamento de head/SEO |
+| React Hook Form | 7.61.1 | Gerenciamento de formulários |
+| TanStack Query | 5.83.0 | Data fetching e cache |
+| Zod           | 3.25.76 | Validação de esquemas |
+
+### 📦 Build e Deploy
+
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| Vite PWA Plugin | 1.0.3 | Progressive Web App |
+| Compression Plugin | 2.2.0 | Compressão Gzip/Brotli |
+| ESLint       | 9.32.0 | Linting de código |
+| PostCSS      | 8.5.6  | Processamento CSS |
+| Netlify      | -      | Hospedagem e CI/CD |
+
+---
+
+## 📱 Seções do Portfólio
+
+### 🏠 Hero Section
+- Apresentação pessoal com foto de perfil
+- Efeito de digitação no título
+- Links sociais (GitHub, LinkedIn)
+- Call-to-actions para projetos e contato
+- Animações de background
+
+### 👤 Sobre Mim
+- Timeline da carreira:
+  - 2020: Início com projetos NFT
+  - Banco Next: Android nativo com Java/XML e MVVM
+  - Intesa Sanpaolo: Kotlin, MVI, Ktor, Room, Hilt
+  - Divitech: Android, Flutter e React
+- Tecnologias principais em badges interativas
+- Quote pessoal sobre filosofia de desenvolvimento
+
+### 🛠️ Habilidades
+Organizadas em 6 categorias com barras de progresso animadas:
+
+1. **Android Nativo**: Java, Kotlin, Jetpack Compose, MVVM/MVI, Coroutines & Flow
+2. **Flutter**: Flutter & Dart, State Management, Clean Architecture, UI & Animações
+3. **Backend**: Java Spring Boot, APIs REST & GraphQL, Microservices, Banco de dados e ORM
+4. **Mobile Libraries**: Hilt & Dagger, Retrofit & Ktor, Room & SQLite, SharedPreferences & DataStore
+5. **Arquitetura & Boas Práticas**: Clean Architecture, SOLID, Design Patterns, Testes unitários e instrumentados
+6. **Ferramentas**: Android Studio, VS Code, Git & GitHub, CI/CD & DevOps
+
+### 🚀 Projetos
+
+1. **CurrencyConverter** - App de conversão de moedas (Kotlin, Jetpack Compose, Hilt, Retrofit, SQLite)
+2. **League of Legends Onboarding** - App temático LoL (Jetpack Compose, MVI, Room, Coroutines)
+3. **Jetpack Compose Navigation** - Navegação e formulários (MVI, Flows & Channels, Form Validator, Hilt)
+4. **Droid Chat** - Aplicativo de chat (WebSocket, DataStore, Camera & Gallery Integration)
+5. **Sistema de Cadastro de Ninjas** - Backend Spring Boot (Java 17, H2, Flyway, JPA, Docker)
+6. **SQLite & DAO Login** - Autenticação local (SQLite, DAO Pattern, User Authentication, Input Validation)
+
+---
+
+## 🚀 Como Executar
+
+### 📋 Pré-requisitos
+- Node.js 18+
+- npm / yarn / bun
+
+### 🔧 Instalação
+
+```bash
+git clone https://github.com/leoschwedler/leo-schwedler-folio.git
 cd leo-schwedler-folio
-
-# Passo 3: Instale as dependências
-npm i
-
-# Passo 4: Inicie o servidor de desenvolvimento
-npm run dev
-```
-
-O projeto estará disponível em `http://localhost:8080`
-
-## Estrutura do Projeto
-
-- **Hero Section**: Apresentação pessoal e links sociais
-- **About Section**: Perfil completo e experiência profissional
-- **Skills Section**: Habilidades técnicas em desenvolvimento mobile
-- **Projects Section**: Projetos desenvolvidos com Android e Flutter
-- **Contact Section**: Formulário de contato e informações
-
-## Experiência Profissional
-
-- **Banca Intesa**: Desenvolvedor mobile com Android nativo
-- **Divitech**: Desenvolvimento com Flutter e Clean Architecture
-- **Banco Next**: Início da jornada em desenvolvimento mobile
-
-## Stack Principal
-
-- **Android Nativo**: Kotlin, Jetpack Compose, MVVM/MVI
-- **Flutter**: Dart, Clean Architecture, Bloc
-- **Backend**: Java Spring Boot, APIs REST
-- **Libraries**: Hilt, Dagger, Retrofit, Ktor, Room
-
-## Como Editar o Código
-
-### Usando Lovable
-
-Visite o [Lovable Project](https://lovable.dev/projects/0633d6e3-7be1-49bb-a995-f0633ad7e868) e comece a fazer prompts.
-
-### Usando seu IDE Preferido
-
-Clone o repositório e faça push das mudanças. Mudanças enviadas também serão refletidas no Lovable.
-
-### Editando Diretamente no GitHub
-
-- Navegue até o arquivo desejado
-- Clique no botão "Edit" (ícone de lápis) no canto superior direito
-- Faça suas mudanças e commit
-
-### Usando GitHub Codespaces
-
-- Navegue até a página principal do repositório
-- Clique no botão "Code" (botão verde) no canto superior direito
-- Selecione a aba "Codespaces"
-- Clique em "New codespace" para lançar um novo ambiente
-
-## Como Fazer Deploy
-
-### Opção 1: cPanel (Recomendado)
-
-1. Execute `npm run build` para gerar os arquivos de produção
-2. Faça upload dos arquivos da pasta `dist` para o diretório público do cPanel
-3. Faça upload do arquivo `.htaccess` para a raiz do diretório público
-4. Configure o domínio `schwedlermobile.com.br` no cPanel
-
-### Opção 2: Lovable
-
-Simplesmente abra o [Lovable](https://lovable.dev/projects/0633d6e3-7be1-49bb-a995-f0633ad7e868) e clique em Share -> Publish.
-
-## Domínio Personalizado
-
-**Domínio Atual:** `schwedlermobile.com.br`
-
-Para conectar um domínio personalizado no cPanel:
-
-1. Acesse o cPanel da sua hospedagem
-2. Vá em "Domains" ou "Domains Manager"
-3. Adicione o domínio `schwedlermobile.com.br`
-4. Aponte para o diretório público correto
-
-Para Lovable, navegue até Project > Settings > Domains e clique em Connect Domain.
-Leia mais aqui: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+npm install
+# ou yarn install
+# ou bun install
