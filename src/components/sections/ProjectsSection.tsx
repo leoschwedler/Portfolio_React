@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 import { Github, Heart } from "lucide-react";
 import currencyImage from "@/assets/currency.png";
 import leagueImage from "@/assets/league.png";
@@ -133,10 +134,51 @@ export const ProjectsSection = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut" as const,
+      },
+    },
+  };
+
   return (
     <section id="projects" className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+      <motion.div
+        className="max-w-7xl mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <motion.div className="text-center mb-16" variants={itemVariants}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
             Projetos
           </h2>
@@ -144,78 +186,123 @@ export const ProjectsSection = () => {
             Projetos mobile que desenvolvi utilizando Android nativo, Flutter e
             Java Spring Boot
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+        >
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
-              <Card
+              <motion.div
                 key={index}
-                className="overflow-hidden bg-gradient-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-card group"
+                variants={cardVariants}
+                whileHover={{
+                  scale: 1.02,
+                  y: -8,
+                  transition: { duration: 0.3 },
+                }}
+                whileTap={{ scale: 0.98 }}
               >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute top-4 right-4 p-2 rounded-full bg-card/90 backdrop-blur-sm">
-                    <IconComponent className="w-4 h-4 text-primary" />
-                  </div>
-                  <div className="absolute top-4 left-4">
-                    <Badge
-                      variant="secondary"
-                      className="bg-card/90 backdrop-blur-sm"
+                <Card className="overflow-hidden bg-gradient-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-card group cursor-pointer h-full">
+                  <div className="relative overflow-hidden">
+                    <motion.img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-cover"
+                      whileHover={{
+                        scale: 1.1,
+                        transition: { duration: 0.3 },
+                      }}
+                    />
+                    <motion.div
+                      className="absolute top-4 right-4 p-2 rounded-full bg-card/90 backdrop-blur-sm"
+                      whileHover={{
+                        scale: 1.1,
+                        rotate: 5,
+                        transition: { duration: 0.2 },
+                      }}
                     >
-                      {project.category}
-                    </Badge>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, techIndex) => (
+                      <IconComponent className="w-4 h-4 text-primary" />
+                    </motion.div>
+                    <motion.div
+                      className="absolute top-4 left-4"
+                      whileHover={{
+                        scale: 1.05,
+                        transition: { duration: 0.2 },
+                      }}
+                    >
                       <Badge
-                        key={techIndex}
-                        variant="outline"
-                        className="text-xs border-border hover:border-primary/50 transition-colors"
+                        variant="secondary"
+                        className="bg-card/90 backdrop-blur-sm"
                       >
-                        {tech}
+                        {project.category}
                       </Badge>
-                    ))}
+                    </motion.div>
                   </div>
 
-                  <div className="flex gap-3">
-                    <Button
-                      size="sm"
-                      className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300"
-                      asChild
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    <motion.div
+                      className="flex flex-wrap gap-2 mb-6"
+                      variants={containerVariants}
                     >
-                      <a
-                        href={project.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      {project.technologies.map((tech, techIndex) => (
+                        <motion.div
+                          key={techIndex}
+                          variants={itemVariants}
+                          whileHover={{
+                            scale: 1.05,
+                            y: -2,
+                            transition: { duration: 0.2 },
+                          }}
+                        >
+                          <Badge
+                            variant="outline"
+                            className="text-xs border-border hover:border-primary/50 transition-colors cursor-pointer"
+                          >
+                            {tech}
+                          </Badge>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+
+                    <div className="flex gap-3">
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                       >
-                        <Github className="w-4 h-4 mr-2" />
-                        Ver no GitHub
-                      </a>
-                    </Button>
+                        <Button
+                          size="sm"
+                          className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300"
+                          asChild
+                        >
+                          <a
+                            href={project.links.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="w-4 h-4 mr-2" />
+                            Ver no GitHub
+                          </a>
+                        </Button>
+                      </motion.div>
+                    </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              </motion.div>
             );
           })}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

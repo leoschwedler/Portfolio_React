@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
 import { BottomNav } from "@/components/navigation/BottomNav";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -39,8 +40,26 @@ const Index = () => {
     setActiveSection(sectionId);
   };
 
+  const pageVariants = {
+    initial: { opacity: 0 },
+    in: { opacity: 1 },
+    out: { opacity: 0 },
+  };
+
+  const pageTransition = {
+    type: "tween" as const,
+    ease: "anticipate" as const,
+    duration: 0.5,
+  };
+
   return (
-    <>
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <Helmet>
         <title>
           Leonardo Schwedler - Desenvolvedor Mobile Android & Flutter
@@ -110,7 +129,7 @@ const Index = () => {
           onSectionChange={scrollToSection}
         />
       </div>
-    </>
+    </motion.div>
   );
 };
 
