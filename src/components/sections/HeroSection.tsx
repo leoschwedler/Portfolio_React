@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Github, Linkedin, Mail, Instagram } from "lucide-react";
-import profileImage from "@/assets/leonardo-profile.jpg";
+import profileImage from "@/assets/leonardo-profile.jpeg";
 
 export const HeroSection = () => {
   const [text, setText] = useState("");
-  const fullText = "Desenvolvedor Full Stack";
+  const fullText = "Desenvolvedor Mobile Android & Flutter";
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -19,40 +19,40 @@ export const HeroSection = () => {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
   };
 
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/leonardo-schwedler",
+      href: "https://github.com/leoschwedler",
       label: "GitHub",
-      color: "hover:bg-white/10 hover:text-white"
+      color: "hover:bg-white/10 hover:text-white",
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/leonardo-schwedler",
-      label: "LinkedIn", 
-      color: "hover:bg-blue-600/20 hover:text-blue-400"
+      href: "https://www.linkedin.com/in/leonardo-schwuedller/",
+      label: "LinkedIn",
+      color: "hover:bg-blue-600/20 hover:text-blue-400",
     },
     {
       icon: Instagram,
       href: "https://instagram.com/leonardo.dev",
       label: "Instagram",
-      color: "hover:bg-pink-600/20 hover:text-pink-400"
-    }
+      color: "hover:bg-pink-600/20 hover:text-pink-400",
+    },
   ];
 
   return (
-    <section 
-      id="hero" 
+    <section
+      id="hero"
       className="min-h-screen flex items-center justify-center relative bg-gradient-hero overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
       <div className="absolute top-20 left-20 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-20 right-20 w-48 h-48 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000" />
-      
+
       <div className="text-center z-10 px-6 max-w-4xl mx-auto">
         {/* Profile Image */}
         <div className="mb-8 flex justify-center animate-scale-in">
@@ -60,9 +60,9 @@ export const HeroSection = () => {
             <img
               src={profileImage}
               alt="Leonardo Schwedler"
-              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/30 shadow-glow"
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white/20 shadow-glow"
             />
-            <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-10"></div>
           </div>
         </div>
 
@@ -82,22 +82,26 @@ export const HeroSection = () => {
         {/* Professional Description */}
         <div className="mb-8 animate-fade-in-delayed">
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Especialista em criar experiências digitais incríveis com <span className="text-primary font-medium">React</span>, <span className="text-primary font-medium">Node.js</span> e tecnologias modernas. 
-            Transformo ideias em soluções elegantes e funcionais.
+            Olá! Sou Leo, desenvolvedor apaixonado por solucionar problemas
+            através da tecnologia. Atualmente, foco no desenvolvimento mobile
+            com <span className="text-primary font-medium">Android nativo</span>{" "}
+            e <span className="text-primary font-medium">Flutter</span>, mas
+            também mantenho estudos em backend com{" "}
+            <span className="text-primary font-medium">Java Spring Boot</span>.
           </p>
         </div>
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-slide-up">
-          <Button 
-            onClick={() => scrollToSection('projects')}
+          <Button
+            onClick={() => scrollToSection("projects")}
             className="bg-gradient-primary hover:shadow-glow transition-all duration-300 px-8 py-3 text-lg font-medium"
           >
             Ver Projetos
           </Button>
-          <Button 
-            variant="outline" 
-            onClick={() => scrollToSection('contact')}
+          <Button
+            variant="outline"
+            onClick={() => scrollToSection("contact")}
             className="border-primary/50 text-primary hover:bg-primary/10 px-8 py-3 text-lg font-medium"
           >
             <Mail className="w-5 h-5 mr-2" />
@@ -107,15 +111,17 @@ export const HeroSection = () => {
 
         {/* Social Media Links */}
         <div className="mb-16 animate-slide-up-delayed">
-          <p className="text-sm text-muted-foreground mb-4 font-medium">Conecte-se comigo</p>
+          <p className="text-sm text-muted-foreground mb-4 font-medium">
+            Conecte-se comigo
+          </p>
           <div className="flex justify-center gap-4">
             {socialLinks.map((social, index) => {
               const IconComponent = social.icon;
               return (
-                <a 
+                <a
                   key={index}
-                  href={social.href} 
-                  target="_blank" 
+                  href={social.href}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className={`group p-4 rounded-full bg-card/50 backdrop-blur-sm border border-border transition-all duration-300 hover:shadow-glow hover:scale-110 ${social.color}`}
                   aria-label={social.label}
@@ -128,8 +134,8 @@ export const HeroSection = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <button 
-          onClick={() => scrollToSection('about')}
+        <button
+          onClick={() => scrollToSection("about")}
           className="animate-bounce hover:animate-none transition-all duration-300 animate-fade-in-delayed"
         >
           <ChevronDown className="w-8 h-8 text-primary" />

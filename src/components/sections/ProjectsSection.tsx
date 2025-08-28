@@ -1,82 +1,136 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Smartphone, Globe, Database } from "lucide-react";
+import { Github, Heart } from "lucide-react";
+import currencyImage from "@/assets/currency.png";
+import leagueImage from "@/assets/league.png";
+import composeLoginImage from "@/assets/composelogin.png";
+import droidChatImage from "@/assets/droidChat.png";
+import loginSqliteImage from "@/assets/loginsqlite.png";
+import ninjaApImage from "@/assets/ninjaap.png";
 
 export const ProjectsSection = () => {
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "Plataforma completa de e-commerce com painel administrativo, sistema de pagamentos e gestão de estoque.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      category: "Fullstack",
-      icon: Globe,
+      title: "CurrencyConverter",
+      description:
+        "Aplicativo Android para conversão de moedas e exibição de cotações em tempo real. Baseado em Clean Architecture, utiliza Navigation Component para navegação fluida, Hilt para injeção de dependência e Retrofit para chamadas à API de câmbio.",
+      image: currencyImage,
+      technologies: [
+        "Android Nativo",
+        "Kotlin",
+        "Jetpack Compose",
+        "Clean Architecture",
+        "Hilt",
+        "Retrofit",
+        "SQLite / DAO",
+      ],
+      category: "Mobile Finance",
+      icon: Heart,
       links: {
-        demo: "https://demo.example.com",
-        github: "https://github.com/leonardo/ecommerce"
-      }
+        github: "https://github.com/leoschwedler/Project-Reply",
+      },
     },
     {
-      title: "Mobile Banking App",
-      description: "Aplicativo mobile para gestão financeira pessoal com autenticação biométrica e sincronização em tempo real.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop",
-      technologies: ["React Native", "Firebase", "Redux", "Expo"],
-      category: "Mobile",
-      icon: Smartphone,
+      title: "League of Legends Onboarding",
+      description:
+        "Aplicativo de onboarding com tema League of Legends, desenvolvido com Jetpack Compose. Possui transições de tela suaves, banco de dados local com Room, chamadas assíncronas usando Coroutines, arquitetura MVI para gerenciamento de estado e Hilt para injeção de dependências.",
+      image: leagueImage,
+      technologies: [
+        "Jetpack Compose",
+        "Kotlin",
+        "MVI Architecture",
+        "Room",
+        "Coroutines",
+        "Hilt",
+      ],
+      category: "Mobile Development",
+      icon: Heart,
       links: {
-        demo: "https://demo.example.com",
-        github: "https://github.com/leonardo/banking-app"
-      }
+        github: "https://github.com/leoschwedler/League-Of-Legends-App-Compose",
+      },
     },
     {
-      title: "Analytics Dashboard",
-      description: "Dashboard interativo para análise de dados com gráficos em tempo real e relatórios personalizados.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-      technologies: ["Vue.js", "D3.js", "Python", "FastAPI"],
-      category: "Data Viz",
-      icon: Database,
+      title: "Jetpack Compose Navigation",
+      description:
+        "Aplicativo de prática para explorar navegação no Jetpack Compose, com foco em navegação aninhada e validação de formulários. Utiliza arquitetura MVI para gerenciamento de estado, Flows e Channels para eventos pontuais e Hilt para injeção de dependências, garantindo código modular e desacoplado.",
+      image: composeLoginImage,
+      technologies: [
+        "Jetpack Compose",
+        "Kotlin",
+        "MVI Architecture",
+        "Flows & Channels",
+        "Hilt",
+        "Form Validator",
+      ],
+      category: "Mobile Development ",
+      icon: Heart,
       links: {
-        demo: "https://demo.example.com",
-        github: "https://github.com/leonardo/analytics"
-      }
+        github: "https://github.com/leoschwedler/Login-and-Signup",
+      },
     },
     {
-      title: "AI Chat Platform",
-      description: "Plataforma de chat inteligente com IA integrada para atendimento automatizado e suporte multilíngue.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
-      technologies: ["Next.js", "OpenAI", "Prisma", "WebSocket"],
-      category: "AI/ML",
-      icon: Globe,
+      title: "Droid Chat",
+      description:
+        "Aplicativo de chat Android desenvolvido com Jetpack Compose, oferecendo uma experiência moderna e fluida. Implementa login e cadastro via WebSocket usando Ktor, com suporte a consumo de APIs REST. Hilt é usado para injeção de dependências, garantindo modularidade e abstração.",
+      image: droidChatImage,
+      technologies: [
+        "Jetpack Compose",
+        "Kotlin",
+        "Hilt",
+        "Ktor (WebSocket & REST)",
+        "DataStore Preferences",
+        "ProtoDataStore",
+        "Camera & Gallery Integration",
+      ],
+      category: "Mobile Chat",
+      icon: Heart,
       links: {
-        demo: "https://demo.example.com",
-        github: "https://github.com/leonardo/ai-chat"
-      }
+        github: "https://github.com/leoschwedler/Droid-Chat",
+      },
     },
     {
-      title: "Fitness Tracker",
-      description: "App de acompanhamento fitness com planos de treino personalizados e integração com wearables.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop",
-      technologies: ["Flutter", "Dart", "Supabase", "Health Kit"],
-      category: "Mobile",
-      icon: Smartphone,
+      title: "Sistema de Cadastro de Ninjas",
+      description:
+        "Aplicação backend desenvolvida com Spring Boot para gerenciar ninjas e suas missões. Utiliza H2 como banco de dados em memória, Flyway para migrações, JPA e Spring Data JPA para persistência de dados, e segue boas práticas de desenvolvimento com controle de versão via Git e GitHub.",
+      image: ninjaApImage,
+      technologies: [
+        "Spring Boot",
+        "Java 17",
+        "H2 Database",
+        "Flyway",
+        "JPA / Spring Data JPA",
+        "Maven",
+        "Docker",
+        "SQL",
+        "Git & GitHub",
+      ],
+      category: "Backend Development",
+      icon: Heart,
       links: {
-        demo: "https://demo.example.com",
-        github: "https://github.com/leonardo/fitness-tracker"
-      }
+        github: "https://github.com/leoschwedler/CadastroDeNinjas",
+      },
     },
     {
-      title: "Smart Home Hub",
-      description: "Central de controle para dispositivos IoT domésticos com automação e monitoramento inteligente.",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop",
-      technologies: ["React", "MQTT", "Raspberry Pi", "Docker"],
-      category: "IoT",
-      icon: Database,
+      title: "SQLite & DAO Login",
+      description:
+        "Aplicativo Android de Login e Registro desenvolvido com SQLite, utilizando o padrão de projeto DAO para gerenciar operações no banco de dados de forma eficiente. Implementa autenticação de usuários com email e senha, registro com validação de dados e hash de senha, e navegação intuitiva entre telas.",
+      image: loginSqliteImage,
+      technologies: [
+        "Android Nativo",
+        "Kotlin",
+        "SQLite",
+        "DAO Pattern",
+        "User Authentication",
+        "Input Validation",
+      ],
+      category: "Mobile Development",
+      icon: Heart,
       links: {
-        demo: "https://demo.example.com",
-        github: "https://github.com/leonardo/smart-home"
-      }
-    }
+        github:
+          "https://github.com/leoschwedler/Signup-and-Login-with-SQLite-Using-DAO-Pattern",
+      },
+    },
   ];
 
   return (
@@ -87,7 +141,8 @@ export const ProjectsSection = () => {
             Projetos
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Alguns dos projetos que desenvolvi utilizando tecnologias modernas
+            Projetos mobile que desenvolvi utilizando Android nativo, Flutter e
+            Java Spring Boot
           </p>
         </div>
 
@@ -95,13 +150,13 @@ export const ProjectsSection = () => {
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="overflow-hidden bg-gradient-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-card group"
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
@@ -109,52 +164,49 @@ export const ProjectsSection = () => {
                     <IconComponent className="w-4 h-4 text-primary" />
                   </div>
                   <div className="absolute top-4 left-4">
-                    <Badge variant="secondary" className="bg-card/90 backdrop-blur-sm">
+                    <Badge
+                      variant="secondary"
+                      className="bg-card/90 backdrop-blur-sm"
+                    >
                       {project.category}
                     </Badge>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech, techIndex) => (
-                      <Badge 
-                        key={techIndex} 
-                        variant="outline" 
+                      <Badge
+                        key={techIndex}
+                        variant="outline"
                         className="text-xs border-border hover:border-primary/50 transition-colors"
                       >
                         {tech}
                       </Badge>
                     ))}
                   </div>
-                  
+
                   <div className="flex gap-3">
-                    <Button 
-                      size="sm" 
-                      className="flex-1 bg-gradient-primary hover:shadow-glow transition-all duration-300"
+                    <Button
+                      size="sm"
+                      className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300"
                       asChild
                     >
-                      <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Demo
-                      </a>
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="border-primary/50 text-primary hover:bg-primary/10"
-                      asChild
-                    >
-                      <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4" />
+                      <a
+                        href={project.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        Ver no GitHub
                       </a>
                     </Button>
                   </div>

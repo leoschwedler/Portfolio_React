@@ -1,73 +1,94 @@
-# Welcome to your Lovable project
+# Portfolio - Leonardo Schwedler
 
-## Project info
+## Sobre o Projeto
 
-**URL**: https://lovable.dev/projects/0633d6e3-7be1-49bb-a995-f0633ad7e868
+Portfolio pessoal de Leonardo Schwedler, desenvolvedor mobile apaixonado por solucionar problemas através da tecnologia.
 
-## How can I edit this code?
+**Foco**: Desenvolvimento mobile com Android nativo e Flutter, além de estudos em backend com Java Spring Boot.
 
-There are several ways of editing your application.
+## Tecnologias Utilizadas
 
-**Use Lovable**
+Este projeto foi construído com:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0633d6e3-7be1-49bb-a995-f0633ad7e868) and start prompting.
+- **Frontend**: React, TypeScript, Vite
+- **UI Components**: shadcn-ui
+- **Styling**: Tailwind CSS
+- **Mobile Stack**: Android Nativo, Flutter, Java Spring Boot
 
-Changes made via Lovable will be committed automatically to this repo.
+## Como Executar Localmente
 
-**Use your preferred IDE**
+### Pré-requisitos
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js & npm instalados - [instalar com nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Passos para Execução
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Passo 1: Clone o repositório
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Passo 2: Navegue para o diretório do projeto
+cd leo-schwedler-folio
 
-# Step 3: Install the necessary dependencies.
+# Passo 3: Instale as dependências
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Passo 4: Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O projeto estará disponível em `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Estrutura do Projeto
 
-**Use GitHub Codespaces**
+- **Hero Section**: Apresentação pessoal e links sociais
+- **About Section**: Perfil completo e experiência profissional
+- **Skills Section**: Habilidades técnicas em desenvolvimento mobile
+- **Projects Section**: Projetos desenvolvidos com Android e Flutter
+- **Contact Section**: Formulário de contato e informações
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Experiência Profissional
 
-## What technologies are used for this project?
+- **Banca Intesa**: Desenvolvedor mobile com Android nativo
+- **Divitech**: Desenvolvimento com Flutter e Clean Architecture
+- **Banco Next**: Início da jornada em desenvolvimento mobile
 
-This project is built with:
+## Stack Principal
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Android Nativo**: Kotlin, Jetpack Compose, MVVM/MVI
+- **Flutter**: Dart, Clean Architecture, Bloc
+- **Backend**: Java Spring Boot, APIs REST
+- **Libraries**: Hilt, Dagger, Retrofit, Ktor, Room
 
-## How can I deploy this project?
+## Como Editar o Código
 
-Simply open [Lovable](https://lovable.dev/projects/0633d6e3-7be1-49bb-a995-f0633ad7e868) and click on Share -> Publish.
+### Usando Lovable
 
-## Can I connect a custom domain to my Lovable project?
+Visite o [Lovable Project](https://lovable.dev/projects/0633d6e3-7be1-49bb-a995-f0633ad7e868) e comece a fazer prompts.
 
-Yes, you can!
+### Usando seu IDE Preferido
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Clone o repositório e faça push das mudanças. Mudanças enviadas também serão refletidas no Lovable.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Editando Diretamente no GitHub
+
+- Navegue até o arquivo desejado
+- Clique no botão "Edit" (ícone de lápis) no canto superior direito
+- Faça suas mudanças e commit
+
+### Usando GitHub Codespaces
+
+- Navegue até a página principal do repositório
+- Clique no botão "Code" (botão verde) no canto superior direito
+- Selecione a aba "Codespaces"
+- Clique em "New codespace" para lançar um novo ambiente
+
+## Como Fazer Deploy
+
+Simplesmente abra o [Lovable](https://lovable.dev/projects/0633d6e3-7be1-49bb-a995-f0633ad7e868) e clique em Share -> Publish.
+
+## Domínio Personalizado
+
+Para conectar um domínio personalizado, navegue até Project > Settings > Domains e clique em Connect Domain.
+
+Leia mais aqui: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
